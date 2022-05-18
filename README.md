@@ -63,5 +63,5 @@ npm run lint
 ## Deploy
 
 ```sh
-heroku git:remote -a vue3-colyseus
+git push heroku master
 ```

@@ -36,5 +36,5 @@ const gameServer = new Server({
 gameServer.define('my_room', MyRoom);
 
 // make it available to receive connections
-gameServer.listen(2567);
+gameServer.listen(port);
 console.log(`Listening on ws://localhost:2567`)
