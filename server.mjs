@@ -10,7 +10,7 @@ import { MyRoom } from "./server/rooms/MyRoom.mjs";
 const port = Number(process.env.PORT) || 3001;
 const app = express();
 const httpServer = createServer(app);
-
+app.use(express.json());
 
 /*
  *  Serve /dist/ folder
