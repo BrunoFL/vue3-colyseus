@@ -27,9 +27,8 @@ app.get(/.*/, (req, res) => {
 
 // create your game server
 const gameServer = new Server({
-  server: http.createServer(),
+  server: httpServer,
 });
-gameServer.attach({ server: httpServer });
 
 // register your room handlers
 gameServer.define("my_room", MyRoom);
