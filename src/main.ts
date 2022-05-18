@@ -9,7 +9,10 @@ app.use(createPinia())
 
 app.mount('#app')
 
-const client = new Colyseus.Client('ws://localhost:2567');
+const host = process.env.VUE_APP_HOST || 'localhost';
+const name = 'ws://' + host;
+console.log(host);
+const client = new Colyseus.Client(host);
 
 client.joinOrCreate("my_room").then(room => {
     console.log(room.sessionId, "joined", room.name);
