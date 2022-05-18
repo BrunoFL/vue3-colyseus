@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import * as Colyseus from "colyseus.js"; // not necessary if included via <script> tag.
+import 'bootstrap/dist/css/bootstrap.css'
 
 const app = createApp(App)
 
