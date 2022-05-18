@@ -1,0 +1,18 @@
+{
+    "name": "vue3",
+    "description": "",
+    "repository": "",
+    "keywords": [
+        "vue3",
+        "node",
+        "colyseus"
+    ],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-static"
+        }
+    ]
+}
