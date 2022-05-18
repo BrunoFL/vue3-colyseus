@@ -2,17 +2,15 @@ import express from "express";
 
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 import { createServer } from "http";
-
 import http from "http";
 import { Server } from "colyseus";
 import { MyRoom } from "./server/rooms/MyRoom.mjs";
 
+const port = process.env.PORT || 3001;
 const app = express();
 const httpServer = createServer(app);
 
-const port = process.env.PORT || 3000;
 
 /*
  *  Serve /dist/ folder
@@ -37,4 +35,5 @@ gameServer.define('my_room', MyRoom);
 
 // make it available to receive connections
 gameServer.listen(port);
-console.log(`Listening on ws://localhost:2567`)
+
+console.log(`Listening on ws://localhost:${port}`);

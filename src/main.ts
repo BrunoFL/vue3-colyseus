@@ -9,7 +9,7 @@ app.use(createPinia());
 
 app.mount("#app");
 console.log(import.meta.env);
-const host = import.meta.env.DEV ? "ws://localhost:2567" : "ws://localhost:3000";
+const host = import.meta.env.DEV ? "ws://localhost:3001" : "ws://localhost:3000";
 console.log(host);
 const client = new Colyseus.Client(host);
 
