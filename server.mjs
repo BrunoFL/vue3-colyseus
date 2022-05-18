@@ -7,7 +7,7 @@ import http from "http";
 import { Server } from "colyseus";
 import { MyRoom } from "./server/rooms/MyRoom.mjs";
 
-const port = process.env.PORT || 3001;
+const port = Number(process.env.PORT) || 3001;
 const app = express();
 const httpServer = createServer(app);
 
